@@ -3,6 +3,10 @@ Bar Chart
 
 This bar chart contains the esential code to build a reusable data driven bar chart that can be updated. The chart is built on d3.js and follows some backbone.js naming conventions.
 
+###Dependencies
+
+Barchart.js requires d3.js and jQuery, zepto, or some other jquery flavor. If you do not use jQuery, the code can be slightly altered to accomodate. (Search for "$" in the code - there are only 3 of them)
+
 #How to Use It
 
 Running Barchart.js attaches the Barchart class to the window. The code below shows how easy it us to get a barchart built and appended to the DOM.
