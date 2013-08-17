@@ -91,7 +91,6 @@ Barchart = function () {
 					min = this.data[i][this.valueAccessor];
 				}
 			}
-			console.log([max, min]);
 			return [max, min];
 		},
 
