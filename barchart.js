@@ -6,12 +6,12 @@ Barchart = function () {
 		width: 200,
 		height: 200,
 		margin: {
-			top: 20,
-			right: 20,
-			bottom: 30,
-			left: 40
+			top: 10,
+			right: 10,
+			bottom: 10,
+			left: 10
 		},
-		// barPadding: 10,
+		barPadding: 10,
 		titleAccessor: 'title',
 		valueAccessor: 'value',
 		transitionDuration: 500,
@@ -28,8 +28,8 @@ Barchart = function () {
 			this.setDimensions();
 			this.createScales();
 			this.visualization = d3.select(this.el)
-				.attr('width', this.width + this.margin.left + this.margin.right)
-				.attr('height', this.height + this.margin.top + this.margin.bottom);
+				.style('width', this.width + this.margin.left + this.margin.right)
+				.style('height', this.height + this.margin.top + this.margin.bottom);
 
 			this.$el.css({
 				position: 'relative'
@@ -52,20 +52,33 @@ Barchart = function () {
 				.style('position', 'absolute')
 				.style('width', this.barWidth)
 				.style('height', 0)
-				.style('bottom', 0)
+				.style('bottom', that.margin.bottom)
 				.style('left', function (d, index) {
-					return that.barWidth * index;
+					if(index == 0){
+						return that.margin.left
+					} else {
+						return ((that.barWidth + that.barPadding) * index) + that.margin.left;
+					}
 				});
 
 			this.chart.transition().duration(this.transitionDuration)
 				.style('width', this.barWidth)
 				.style('height', function (d) {
 					return that.yScale(d[that.valueAccessor]);
+				})
+				.style('bottom', that.margin.bottom)
+				.style('left', function (d, index) {
+					if(index == 0){
+						return that.margin.left
+					} else {
+						return ((that.barWidth + that.barPadding) * index) + that.margin.left;
+					}
 				});
 
 			this.chart
 			  .exit().transition().duration(this.transitionDuration)
-			  	.attr('width', 0)
+			  	.style('width', 0)
+			  	.style('height', 0)
 			  	.remove()
 		},
 
@@ -88,7 +101,7 @@ Barchart = function () {
 		},
 
 		setBarWidth: function () {
-			this.barWidth = this.width / this.data.length;
+			this.barWidth = (this.width - ((this.data.length - 1) * this.barPadding)) / this.data.length;
 		},
 
 		setDimensions: function () {
@@ -117,4 +130,4 @@ Barchart = function () {
 
 	return Barchart;
 
-}()
+}();
