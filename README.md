@@ -22,6 +22,7 @@ $('body').append(myBarchart.$el);
 There are several options that can be passed into the barchart constructor. They are listed at the top of barchart.js. Any method named the same as in the Barchart will overwrite the Barchart's method. Here is a list of the options currently in place.
 
 Option | Type | Description
+--- | --- | ---
 width | Number | Defines width of bar chart
 height | Number | Defines height of bar chart
 margin | hash including top, right, bottom, and left | Defines the margins of the bar chart
