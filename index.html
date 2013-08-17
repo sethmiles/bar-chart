@@ -1,39 +1,39 @@
 <html>
-	<head>
-		<title>Bar Chart Demo</title>
-		<script src="http://zeptojs.com/zepto.min.js"></script>
-		<script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="data.js"></script>
-		<script src="barchart.js"></script>
-	</head>
-	<body>
-		<style>
-			.bar {
-				background-color: steelblue;
-			}
-		</style>
-		<div class="demo"></div>
-		<input id="update" type="button" value="Update Graph" />
-		<script>
-			var myBarchart = new Barchart({
-				width: 300,
-				height: 300,
-				data: data1
-			});
+  <head>
+    <title>Bar Chart Demo</title>
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="data.js"></script>
+    <script src="barchart.js"></script>
+  </head>
+  <body>
+    <style>
+      .bar {
+        background-color: steelblue;
+      }
+    </style>
+    <div class="demo"></div>
+    <input id="update" type="button" value="Update Graph" />
+    <script>
+      var myBarchart = new Barchart({
+        width: 300,
+        height: 300,
+        data: data1
+      });
 
-			$('.demo').append(myBarchart.$el);
+      $('.demo').append(myBarchart.$el);
 
-			$('#update').on('click', function (evt) {
-				var data = data1;
-				$(evt.target).toggleClass('clicked');
-				if($(evt.target).hasClass('clicked')){
-					data = window.data2
-				}
-				myBarchart.setData(data);
-				myBarchart.render();
-			});
-		</script>
-	</body>
+      $('#update').on('click', function (evt) {
+        var data = data1;
+        $(evt.target).toggleClass('clicked');
+        if($(evt.target).hasClass('clicked')){
+          data = window.data2
+        }
+        myBarchart.setData(data);
+        myBarchart.render();
+      });
+    </script>
+  </body>
 </html>
 
 
