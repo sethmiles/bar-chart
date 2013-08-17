@@ -23,6 +23,7 @@ There are several options that can be passed into the barchart constructor. They
 
 Option | Type | Description
 --- | --- | ---
+data | Array of Objects | This is required. Each object should represent one bar, and the data accessors are options as well
 width | Number | Defines width of bar chart
 height | Number | Defines height of bar chart
 margin | hash including top, right, bottom, and left | Defines the margins of the bar chart
