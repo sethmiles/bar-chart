@@ -53,6 +53,10 @@
 			.table .table {
 			  background-color: #ffffff;
 			}
+
+			.bar {
+				background-color: steelblue;
+			}
 		</style>
 		<div class="data">
 			<table class="table">
@@ -74,15 +78,17 @@
 
 			var myBarchart = new Barchart({
 				width: 300,
-				height: 400
+				height: 400,
+				data: data
 			});
 
 			var mySecondBarchart = new Barchart({
 				width: 999,
-				height: 999
+				height: 999,
+				data: data
 			});
 
-			$('.demo').html(myBarchart.$el);
+			$('.demo').append(myBarchart.$el);
 
 		</script>
 	</body>
