@@ -1,12 +1,13 @@
 
-window.Barchart = function () {
+Barchart = function () {
 
 	var hash = {
 
 		width: 200,
 		height: 200,
 
-		initialize: function () {
+		initialize: function (options) {
+			this.setOptions(options);
 			this.$el = $('<div></div>').addClass('barchart');
 			console.log('initializing...');
 		},
@@ -21,19 +22,24 @@ window.Barchart = function () {
 
 		setData: function (data) {
 			this.data = data || this.options.data;
-		}
+		},
 
+		setOptions: function (options) {
+			for(prop in options){
+				this[prop] = options[prop];
+			}
+		}
 
 	}
 
-	var klass = function () {
+	var Barchart = function (options) {
 		this.initialize.apply(this, arguments);
 	}
 
 	for(prop in hash){
-		klass.prototype[prop] = hash[prop];
+		Barchart.prototype[prop] = hash[prop];
 	}
 
-	return klass;
+	return Barchart;
 
 }()

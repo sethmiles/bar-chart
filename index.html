@@ -72,7 +72,15 @@
 				$('table tbody').append($('<tr><td>' + datum.title + '</td><td>' + datum.value + '</td></tr>'));
 			});
 
-			var myBarchart = new Barchart();
+			var myBarchart = new Barchart({
+				width: 300,
+				height: 400
+			});
+
+			var mySecondBarchart = new Barchart({
+				width: 999,
+				height: 999
+			});
 
 			$('.demo').html(myBarchart.$el);
 
