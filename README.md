@@ -32,7 +32,7 @@ titleAccessor | String | The name of the value in the data used for the bar titl
 valueAccessor | String | The name of the value in the data for the number
 transitionDuration | Number | Length of animation durations in miliseconds
 
-#Update
+##Update
 
 To update an existing graph, reset the data and call the graph's render method. Continuing with the example above, follow the code below.
 
@@ -43,7 +43,7 @@ myBarchart.render();
 
 The current implementation uniquely identifies each bar by the bars title property. When updating the bar chart, d3 will map the updated data values to the corresponding bars and change those bars. D3 will also introduce new bars that previously did not exist as well as remove bars that the new data does not include. Check out the demo on index.html to better see how this works.
 
-#Data Structure
+##Data Structure
 
 Currently, the data structure needs to be an array of objects. The objects can contain whatever properties they need, but there are two required values. They are title, and value. These value names can be changed so long as the title and value accessor options are passed in, otherwise it defaults to title and value. Below is an example of a valid data structure.
 
@@ -52,8 +52,9 @@ Currently, the data structure needs to be an array of objects. The objects can c
   {
     title: 'bar1',
     value: 60
-    // Any other property can be included here, might be handy for an onclick or hover event
-    // since the entire object will be returned (when I get around to implementing it)
+    // Any other property can be included here, might be handy for an onclick
+    // or hover event since the entire object will be returned (when I get 
+    // around to implementing it)
   },
   {
     title: 'bar2',
@@ -66,6 +67,6 @@ Currently, the data structure needs to be an array of objects. The objects can c
 ]
 ```
 
-#Questions & Comments
+##Questions & Comments
 
 If you have any questions, comments or feature requests email me. Feel free to send pull requests as well. This code is part of a series on data visualizations that hopefully will culminate into a visualization library.
