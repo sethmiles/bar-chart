@@ -1,7 +1,7 @@
 Bar Chart
 =========
 
-This bar chart contains the esential code to build a reusable data driven bar chart that can be updated. The chart is built on d3.js and follows some backbone.js naming conventions.
+This bar chart contains the essential code to build a reusable data driven bar chart that can be updated. The chart is built on d3.js and follows some backbone.js naming conventions.
 
 [logo]: https://lh4.googleusercontent.com/-KNlYD4uquXo/UhAT_KuvqGI/AAAAAAAAAgs/IasDdM5l4lg/w308-h301-no/barchart.png "Example of a barchart"
 
