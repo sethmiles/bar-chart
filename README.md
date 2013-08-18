@@ -32,7 +32,7 @@ Option | Type | Description
 data | Array of Objects | This is required. Each object should represent one bar, and the data accessors are options as well
 width | Number | Defines width of bar chart
 height | Number | Defines height of bar chart
-margin | hash including top, right, bottom, and left | Defines the margins of the bar chart
+margin | Hash including top, right, bottom, and left properties | Defines the margins of the bar chart
 barPadding | Number | The padding inbetween each bar
 titleAccessor | String | The name of the value in the data used for the bar title (and unique identifier)
 valueAccessor | String | The name of the value in the data for the number
