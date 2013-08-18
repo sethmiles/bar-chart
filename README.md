@@ -36,7 +36,7 @@ margin | hash including top, right, bottom, and left | Defines the margins of th
 barPadding | Number | The padding inbetween each bar
 titleAccessor | String | The name of the value in the data used for the bar title (and unique identifier)
 valueAccessor | String | The name of the value in the data for the number
-transitionDuration | Number | Length of animation durations in miliseconds
+transitionDuration | Number | Length of animation durations in milliseconds
 
 ##Update
 
