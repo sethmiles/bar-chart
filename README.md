@@ -7,7 +7,7 @@ This bar chart contains the essential code to build a reusable data driven bar c
 
 ###Dependencies
 
-Barchart.js requires d3.js and jQuery, zepto, or some other jquery flavor. If you do not use jQuery, the code can be slightly altered to accomodate. (Search for "$" in the code - there are only 3 of them)
+Barchart.js requires d3.js and jQuery, zepto, or some other jquery flavor. If you do not use jQuery, the code can be slightly altered to accommodate. (Search for "$" in the code - there are only 3 of them)
 
 #How to Use It
 
