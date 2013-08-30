@@ -1,5 +1,5 @@
 
-Barchart = function () {
+BarChart = function () {
 
   var hash = {
 
@@ -77,7 +77,6 @@ Barchart = function () {
 
       this.chart
         .exit().transition().duration(this.transitionDuration)
-          .style('width', 0)
           .style('height', 0)
           .remove()
     },
@@ -119,14 +118,14 @@ Barchart = function () {
     }
   }
 
-  var Barchart = function (options) {
+  var BarChart = function (options) {
     this.initialize.apply(this, arguments);
   }
 
   for(prop in hash){
-    Barchart.prototype[prop] = hash[prop];
+    BarChart.prototype[prop] = hash[prop];
   }
 
-  return Barchart;
+  return BarChart;
 
 }();
